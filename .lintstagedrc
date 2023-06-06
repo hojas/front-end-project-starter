@@ -1,0 +1,8 @@
+{
+  "*.{js,ts,tsx,vue}": [
+    "eslint"
+  ],
+  "*.{vue,css,scss}": [
+    "stylelint --allow-empty-input"
+  ]
+}
