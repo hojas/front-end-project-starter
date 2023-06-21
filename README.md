@@ -16,6 +16,8 @@ A starter template for Vue and TypeScript with features.
 
 ## Setup Git Hooks
 
+> Steps to setup git hooks this project.
+
 ### Init commitlint
 
 https://commitlint.js.org/#/guides-local-setup
