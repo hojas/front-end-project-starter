@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import VueLogo from '@/components/VueLogo.vue'
 import MyCounter from './components/MyCounter.vue'
+import VueLogo from '@/components/VueLogo.vue'
 </script>
 
 <template>

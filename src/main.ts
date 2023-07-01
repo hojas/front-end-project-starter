@@ -1,3 +1,4 @@
+import type { Component } from 'vue'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
@@ -7,7 +8,7 @@ import { router } from './router.ts'
 import { registerPlugins } from './plugins'
 
 const pinia = createPinia()
-const app = createApp(App)
+const app = createApp(App as Component)
 
 app.use(pinia)
 app.use(router)

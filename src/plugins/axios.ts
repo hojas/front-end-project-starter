@@ -1,5 +1,6 @@
-import { App } from 'vue'
-import axios, { AxiosRequestConfig, AxiosResponse, AxiosError } from 'axios'
+import type { App } from 'vue'
+import type { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios'
+import axios from 'axios'
 
 export interface CustomResponse<T = unknown, D = unknown>
   extends AxiosResponse<T, D> {
@@ -18,7 +19,7 @@ instance.interceptors.response.use(
     ...response,
     ok: true,
   }),
-  async (error: AxiosError<Record<string, unknown>>) => {
+  (error: AxiosError<Record<string, unknown>>) => {
     const defaultMsg = '请求失败，请稍后再试'
     const { data = {} } = error.response as CustomResponse<
       Record<string, unknown>
@@ -30,30 +31,30 @@ instance.interceptors.response.use(
       ok: false,
       message,
     }
-  }
+  },
 )
 
 const customInstance = {
   get: <T = unknown, R = CustomResponse<T>, D = unknown>(
     url: string,
-    config?: AxiosRequestConfig<D>
+    config?: AxiosRequestConfig<D>,
   ): Promise<R> => instance.get(url, config),
 
   post: <T = unknown, R = CustomResponse<T>, D = unknown>(
     url: string,
     data?: D,
-    config?: AxiosRequestConfig<D>
+    config?: AxiosRequestConfig<D>,
   ): Promise<R> => instance.post(url, data, config),
 
   put: <T = unknown, R = CustomResponse<T>, D = unknown>(
     url: string,
     data?: D,
-    config?: AxiosRequestConfig<D>
+    config?: AxiosRequestConfig<D>,
   ): Promise<R> => instance.put(url, data, config),
 
   delete: <T = unknown, R = CustomResponse<T>, D = unknown>(
     url: string,
-    config?: AxiosRequestConfig<D>
+    config?: AxiosRequestConfig<D>,
   ): Promise<R> => instance.delete(url, config),
 }
 
