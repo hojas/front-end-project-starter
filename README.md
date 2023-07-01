@@ -5,13 +5,12 @@ A starter template for Vue and TypeScript with features.
 ## Features
 
 - [x] Vue 3
-- [x] TypeScript
 - [x] Vue Router
 - [x] Pinia
 - [x] Vite
+- [x] TypeScript
 - [x] Vitest
 - [x] ESLint
-- [x] Prettier
 - [x] Stylelint
 
 ## Setup Git Hooks
