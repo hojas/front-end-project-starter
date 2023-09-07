@@ -13,9 +13,7 @@ A starter template for Vue and TypeScript with features.
 - [x] ESLint
 - [x] Stylelint
 
-## Setup Git Hooks
-
-> Steps to setup git hooks this project.
+## How to set up git hooks for a new project
 
 ### Init commitlint
 
