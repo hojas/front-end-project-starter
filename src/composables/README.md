@@ -1,1 +1,0 @@
-Global composable pinia store.

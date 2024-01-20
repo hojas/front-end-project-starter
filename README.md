@@ -1,21 +1,18 @@
-# Vue TypeScript Starter
+# frontend-project-starter
 
-A starter template for Vue and TypeScript with features.
+A starter template for frontend project with commit lint.
 
 ## Features
 
-- [x] Vue 3
-- [x] Vue Router
-- [x] Pinia
-- [x] Vite
-- [x] TypeScript
-- [x] Vitest
 - [x] ESLint
-- [x] Stylelint
+- [x] StyleLint
+- [x] commitlint
+- [x] husky
+- [x] lint-staged
+- [x] commitizen
+- [x] conventional-changelog
 
-## How to set up git hooks for a new project
-
-### Init commitlint
+## Init commitlint
 
 https://commitlint.js.org/#/guides-local-setup
 
@@ -24,7 +21,7 @@ $ pnpm add -D @commitlint/{config-conventional,cli}
 $ echo "module.exports = { extends: ['@commitlint/config-conventional'] }" > commitlint.config.js
 ```
 
-### Init husky
+## Init husky
 
 https://typicode.github.io/husky/getting-started.html
 
@@ -42,7 +39,7 @@ Edit `.husky/pre-commit`:
 pnpm lint-staged --allow-empty "$1"
 ```
 
-### Init cz
+## Init cz
 
 http://commitizen.github.io/cz-cli/
 
